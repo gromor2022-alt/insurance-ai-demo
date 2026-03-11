@@ -144,11 +144,11 @@ profile = df[df["Client"]==selected].iloc[0]
 
 colA,colB = st.columns(2)
 
-colA.write("Policy:",profile["Policy"])
-colA.write("Premium:",profile["Premium"])
-colA.write("Expiry:",profile["Expiry"])
+colA.write(f"Policy: {profile['Policy']}")
+colA.write(f"Premium: ₹{profile['Premium']}")
+colA.write(f"Expiry: {profile['Expiry']}")
 
-colB.write("Interested Product:",profile["Interest"])
+colB.write(f"Interested Product: {profile['Interest']}")
 colB.write("Next Follow-up: 15 days")
 
 st.divider()
